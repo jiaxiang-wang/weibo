@@ -1,0 +1,368 @@
+body {
+    font-size: 16px;
+    font-weight: 0;
+    padding: 0;
+    margin: 0;
+}
+.selector-for-some-widget {
+    box-sizing: content-box;
+    /* 用了上面方法重定义后，所有嵌套在内的元素-包括通过:before以及:after产生的内容，都会继承.selector-for-some-widget所指定的box-sizing。 */
+}
+.box {
+    background: #f7f7f7;
+    height: 36px;
+}
+.head {
+    max-width: 1200px;
+    background: #f7f7f7;
+    height: 35px;
+    padding: 0;
+}
+.head .head-nav {
+    width: 400px;
+}
+.head .head-nav a {
+    color: #808080;
+    font-size: 14px !important;
+    padding: 0;
+    margin: 0;
+    line-height: 36px;
+}
+.head .head-nav li em,
+.head-login li em {
+    line-height: 30px;
+    color: #d9d9d9;
+}
+.head .head-nav .active a {
+    color: #575757;
+}
+.head .head-login {
+    width: 100px;
+}
+.head .head-login a {
+    color: #a6a6a6;
+    font-size: 14px !important;
+    padding: 0;
+    margin: 0;
+    line-height: 36px;
+}
+
+.head .head-login .active a {
+    color: #262626;
+}
+.head .head-nav a:hover,
+.head .head-nav .active a:hover,
+.head .head-login a:hover,
+.head .head-login .active a:hover {
+    color: red;
+}
+.head .head-nav .active {
+    width: 80px;
+    height: 35px;
+    background: #fff;
+}
+/****************************主体内容****************************/
+.container {
+    padding: 0;
+    max-width: 1200px;
+}
+.content {
+    max-width: 1200px;
+}
+/*广告01*/
+.content #advertisement {
+    width: 100%;
+    height: 60px;
+}
+.content #advertisement {
+    padding: 0;
+    margin: 0;
+}
+.content #advertisement .close {
+    padding: 0;
+}
+.content .search {
+    width: 100%;
+    height: 84px;
+}
+.content .logo img {
+    width: 218px;
+    height: 55px;
+    margin-top: 15px;
+}
+.content .search-input {
+    width: 370px;
+    height: 40px;
+    margin-top: 22px;
+}
+.content .search-input .btn {
+    width: 40px;
+    height: 40px;
+    background: #bf2c24;
+}
+.content .search-input .btn:hover {
+    background: #ed4259;
+    cursor: pointer;
+}
+.content .search-input .form-control {
+    height: 40px;
+}
+.content .search-input i {
+    color: #fff;
+}
+.content .search .mybook {
+    width: 120px;
+    height: 40px;
+    margin-top: 22px;
+}
+.content .search .mybook a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #000;
+}
+.content .search .mybook a:hover {
+    background: #ed4259;
+    color: #fff;
+}
+.content .search #hidden {
+    width: 245px;
+    display: none;
+    z-index: 999;
+    position: relative;
+}
+.content .search #hidden .list-group-item {
+    padding: 0;
+}
+.content .search #hidden .list-group-item a:hover {
+    color: #575757;
+}
+.content .search #hidden .list-group-item a {
+    color: #a6a6a6;
+}
+.box-2 {
+    background: #3e3d43;
+    height: 40px;
+}
+.box-2 #content {
+    width: 1200px;
+    height: 40px;
+}
+.box-2 #content ul {
+    width: 100%;
+    height: 40px;
+    list-style-type: none;
+}
+.box-2 #content ul a {
+    color: #fff;
+}
+
+.box-2 #content .navbar {
+    padding: 0px;
+    margin: 0;
+}
+.box-2 #content ul li:first-of-type {
+    width: 220px;
+    height: 39px;
+    background: #262529;
+}
+.box-2 #box2 .content-2 {
+    width: 220px;
+    height: 420px;
+}
+.box-2 #box2 .content-2 .media {
+    width: 110px;
+    height: 60px;
+    color: #2c2c2c;
+}
+.box-2 #box2 .content-2,
+.box-2 #box2 .content-2 .col,
+.box-2 #box2 .content-2 .row {
+    margin: 0px;
+    padding: 0px;
+}
+.box-2 #box2 .content-2 #row > div {
+    background: #fcfcfa;
+}
+.box-2 #box2 .content-2 #row > div:nth-child(4n + 1) {
+    background: #f7f6f2;
+}
+.box-2 #box2 .content-2 #row > div:nth-child(4n + 2) {
+    background: #f7f6f2;
+}
+.box-2 #box2 .content-2 #row > div,
+.box-2 #box2 .content-2 > div > div > div {
+    transition: color 0.5s;
+}
+.box-2 #box2 .content-2 #row > div:hover,
+.box-2 #box2 .content-2 > div > div > div:last-child:hover {
+    color: #ed4259;
+    cursor: pointer;
+}
+.box-2 #box2 .content-2 > div i {
+    margin-left: 15px;
+    font-size: 30px;
+    line-height: 60px;
+}
+.box-2 #box2 .content-2 > div > div {
+    width: 40px;
+    height: 60px;
+    line-height: 30px;
+}
+.box-2 #box2 .content-2 .col > div > div > div:last-child {
+    color: #a6a6a6;
+}
+#box2 .content-3 {
+    width: 740px;
+    height: 410px;
+    background: #fff;
+    margin-top: 10px;
+}
+#box2 .content-3 #myCarousel {
+    width: 740px;
+    height: 250px;
+}
+#box2 .content-3 #myCarousel ol {
+    width: 100%;
+    height: 36px;
+    margin: 0px;
+}
+#box2 .content-3 #myCarousel ol li {
+    display: block;
+    width: 136px;
+    height: 36px;
+    background: #000;
+    border: none;
+    position: relative;
+    text-indent: 0px;
+    margin: 0px;
+    line-height: 36px;
+    text-align: center;
+    border-right: 1px solid #a6a6a6;
+}
+#box2 .content-3 #myCarousel ol .active {
+    background: #ed4259;
+}
+#box2 .content-3 #myCarousel ol li a {
+    font-size: small;
+    color: #fff;
+    text-decoration: none;
+}
+#box2 .content-3 #myCarousel i {
+    font-size: 20px;
+    line-height: 36px;
+    color: #fff;
+    padding: 0px;
+}
+#box2 .content-3 #myCarousel ol li a:hover {
+    color: rgb(247, 212, 148);
+}
+#box2 .content-3 #myCarousel ol li:last-child {
+    width: 60px;
+    height: 36px;
+    border: none;
+}
+#box2 .content-3 #myCarousel img {
+    width: 740px;
+    height: 250px;
+}
+#box2 .content-3 #myCarousel img:hover {
+    cursor: pointer;
+}
+#box2 .content-3 .advertisement {
+    width: 740px;
+    height: 160px;
+}
+#box2 .content-3 .advertisement img {
+    width: 180px;
+    height: 140px;
+    margin-top: 20px;
+}
+#box2 .content-3 .advertisement .row {
+    width: 100%;
+    height: 160px;
+    margin: 0px;
+}
+#box2 .content-3 .advertisement .row > .bg {
+    background: #f7f6f2;
+}
+#box2 .content-3 .advertisement .row .col-lg-4 {
+    transition: box-shadow 0.5s;
+}
+#box2 .content-3 .advertisement .row .col-lg-4:hover {
+    box-shadow: 0px 0px 10px #888888;
+    cursor: pointer;
+}
+#box2 .content-4 {
+    width: 220px;
+    height: 410px;
+    margin-top: 10px;
+}
+#box2 .content-4 #list {
+    width: 220px;
+    height: 250px;
+    background: #fff;
+}
+#box2 .content-4 #list h3 {
+    font-size: 16px;
+    font-weight: bolder;
+    margin: 8px 0px;
+    padding: 0;
+    line-height: normal;
+}
+#box2 .content-4 #list h3 a {
+    color: #3e3d43;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+#box2 .content-4 #list h3 a:hover {
+    color: #ed4259;
+}
+#box2 .content-4 #list ul {
+    width: 100%;
+    height: 190px;
+}
+#box2 .content-4 #list ul li {
+    width: 218px;
+    height: 25px;
+    background: #fff;
+    margin: 0px 0px 6px 0px;
+    border: none;
+    padding: 0;
+    line-height: 25px;
+}
+#box2 .content-4 #list ul a {
+    text-decoration: none;
+    color: #262529;
+    font-size: 13px;
+    padding: 0px 10px;
+    font-weight: lighter;
+}
+#box2 .content-4 #list ul a > span:first-child > i {
+    font-style: normal;
+}
+#box2 .content-4 #list ul a > .red {
+    width: 40px;
+    display: block;
+    background: #bf2c24;
+    text-align: center;
+    margin-left: 5px;
+    color: #fff;
+}
+#box2 .content-4 #list ul a > .red2 {
+    color: #bf2c24;
+}
+#box2 .content-4 #list ul a > span:last-child {
+    display: block;
+    width: 140px;
+    height: 25px;
+}
+#box2 .content-4 .advertisement {
+    width: 220px;
+    height: 160px;
+}
+#box2 .content-4 .advertisement a > img {
+    width: 220px;
+    height: 150px;
+    margin-top: 10px;
+}
