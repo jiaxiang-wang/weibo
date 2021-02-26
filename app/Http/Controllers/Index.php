@@ -6,6 +6,6 @@ use Illuminate\Http\Request;
 
 class Index extends Controller{
     public function index(){
-        echo 'Index';
+        return 'Index';
     }
 }
