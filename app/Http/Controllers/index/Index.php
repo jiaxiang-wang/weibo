@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class Index extends Controllers{
+class Index extends Controller{
     public function index(){
         return 'Index';
     }
