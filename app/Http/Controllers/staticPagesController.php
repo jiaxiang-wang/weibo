@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 //构建三个静态页面分别是主页、帮助页、关于页
-class staticPagesController extends Controller
+class StaticPagesController extends Controller
 {
     //主页
     public function home(){
