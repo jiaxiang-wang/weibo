@@ -17,5 +17,5 @@ Route::get('/','Index@index');
 Route::get('/login','Index@login');
 Route::get('/test','Index@test');
 //Route::get('/','StaticPagesController@home');
-Route::get('/help','StaticPagesController@help');
-Route::get('/about','StaticPagesController@about');
+Route::get('/help','StaticPages@help');
+Route::get('/about','StaticPages@about');
