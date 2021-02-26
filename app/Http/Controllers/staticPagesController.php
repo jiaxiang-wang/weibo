@@ -14,8 +14,8 @@ class staticPagesController extends Controller
     }
     //帮助页
     public function help(){
-        //return '帮助页';
-        return view('/static_pages/help');
+        return '帮助页';
+        //return view('/static_pages/help');
     }
     //关于页
     public function about(){
