@@ -6,12 +6,12 @@ use Illuminate\Http\Request;
 
 class Index extends Controller{
     public function index(){
-        echo 'Index';
+        return view('/index/index');
     }
     public function login(){
-        echo '登录';
+        return view('/index/login');
     }
     public function test(){
-        echo '测试';
+        return view('/index/test');
     }
 }
