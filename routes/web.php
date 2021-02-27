@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/','StaticPages@home')->name('home');
 Route::get('/help','StaticPages@help')->name('help');
 Route::get('/about','StaticPages@about')->name('about');
+
+// 注册页面的路由
+Route::get('signup','Users@create')->name('signup');
