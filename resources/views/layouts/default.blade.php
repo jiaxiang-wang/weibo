@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>@yield('title','微博主页')</title>
-    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     <link rel="stylesheet" href="/static/css/home.css">
 </head>
 <body>
