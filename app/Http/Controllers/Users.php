@@ -12,14 +12,26 @@ class Users extends Controller
     {
         return view('users.signup');
     }
+    /* 
+     *在下面代码中，由于 show() 方法传参时声明了类型 —— Eloquent 模型 User，
+     *对应的变量名 $user 会匹配路由片段中的 {user}，这样，Laravel 会自动注入
+     *与请求 URI 中传入的 ID 对应的用户模型实例 。
+     *compact 方法转化为一个关联数组
+     */
     public function show(User $user)
     {
-        /* 在上面代码中，由于 show() 方法传参时声明了类型 —— Eloquent 模型 User，
-        对应的变量名 $user 会匹配路由片段中的 {user}，这样，Laravel 会自动注入
-        与请求 URI 中传入的 ID 对应的用户模型实例 。*/
         return view('users.show',compact('user'));
-        /*
-         compact 方法转化为一个关联数组
-        */
+    }
+    /*
+        注册用户提交到store方法
+    */
+    public function store(Request $request)
+    {
+        $this->validate($request,[
+            'name' => 'required|unique:users|max:50',
+            'email' => 'required|email|unique:users|max:255',
+            'password' => 'required|confirmed|min:6',
+        ]);
+        return;
     }
 }
