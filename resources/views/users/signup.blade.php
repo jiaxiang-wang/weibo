@@ -7,6 +7,9 @@
             <h5>注册</h5>
         </div>
         <div class="card-body">
+
+            @include('shared._errors')
+
             <form action="{{route('users.store')}}" method="post">
                 {{csrf_field()}}
                 <div class="form-group">
@@ -23,7 +26,7 @@
                 </div>
                 <div class="form-group">
                     <label for="password_confirmation">确认密码</label>
-                    <input type="password_confirmation" name="password_confirmation" class="form-control" value="{{old('password_confirmation')}}"  placeholder="请确认密码">
+                    <input type="password" name="password_confirmation" class="form-control" value="{{old('password_confirmation')}}"  placeholder="请确认密码">
                 </div>
                 <button type="submit" class="btn btn-primary">注册</button>
             </form>
