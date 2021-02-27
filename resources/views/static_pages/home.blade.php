@@ -1,7 +1,15 @@
 @extends('layouts.default')
-<!-- 继承父视图layouts/default.blade.php -->
-@section('title')
+@section('title','首页')
 @section('content')
-<h1>主页</h1>
+<div class="jumbotron">
+  <h1>Hello </h1>
+  <p class="lead">
+    欢迎来到王佳博的个人主页
+  </p>
+  <p>一切从这里开始</p>
+  <p>
+    <a href="#" class="btn btn-lg btn-success" role="button">现在注册</a>
+  </p>
+</div>
 @stop
 
