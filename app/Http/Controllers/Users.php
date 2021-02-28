@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
-
+use Auth;
 class Users extends Controller
 {
     //注册功能
@@ -47,6 +47,7 @@ class Users extends Controller
             'email' => $request->email,
             'password' => bcrypt($request->password),
         ]);
+        Auth::login($user);
         //存入一条临时数据 只在下一次请求前有效
         session()->flash('success','欢迎，您将在这里开启一段新的旅程~0.0');
         return redirect()->route('users.show',[$user]);

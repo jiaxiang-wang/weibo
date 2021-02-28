@@ -2,9 +2,9 @@
 @section('title','首页')
 @section('content')
 <div class="jumbotron">
-  <h1>Hello </h1>
+  <h1>你好！</h1>
   <p class="lead">
-   想要走得快，就单独上路；想要走得远，就结伴同行。
+   欢迎访问Heroku!
   </p>
   <p>一切从这里开始</p>
   <p>
