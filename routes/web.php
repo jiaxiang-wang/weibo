@@ -28,3 +28,6 @@ Route::get('/users/{user}','Users@show')->name('users.show');
 Route::get('login','Sessions@create')->name('login');
 Route::post('login','Sessions@store')->name('login');
 Route::delete('logout','Sessions@destroy')->name('logout');
+/* 编辑用户 */
+Route::get('/users/{user}/edit','Users@edit')->name('users.edit');
+//Route::patch('/users/{user}/update','Users@update')->name('users.update');

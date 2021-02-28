@@ -1,15 +1,13 @@
-
-
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
 
 body {
-    font-size: 14px;
-    font-weight: normal;
+  font-size: 14px;
+  font-weight: normal;
 }
 
 nav.navbar.navbar-expand-lg {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 footer {
@@ -31,5 +29,13 @@ footer {
   img.brand-icon {
     width: 17px;
     height: 17px;
+  }
+}
+.gravatar_edit {
+  margin: 15px auto;
+  text-align: center;
+  .gravatar {
+    float: none;
+    max-width: 100px;
   }
 }
