@@ -4,7 +4,7 @@
 <div class="jumbotron">
   <h1>你好！</h1>
   <p class="lead">
-   欢迎访问Heroku!
+   欢迎访问我的博客!
   </p>
   <p>一切从这里开始</p>
   <p>
