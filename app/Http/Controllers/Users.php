@@ -7,6 +7,15 @@ use App\Models\User;
 use Auth;
 class Users extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth',[
+            'except' => ['create','store']
+        ]);
+        $this->middleware('guest',[
+            'only' => ['create']
+        ]);
+    }
     //注册功能
     public function create()
     {
@@ -20,6 +29,7 @@ class Users extends Controller
      */
     public function show(User $user)
     {
+        $this->authorize('show',$user);//1.设置策略 2.编写策略页面方法 3.编写自动注册方法
         return view('users.show',compact('user'));
     }
     /*
@@ -54,6 +64,7 @@ class Users extends Controller
     }
     public function edit(User $user)
     {
+        $this->authorize('update',$user);
         //compact创建一个包含变量名和它们的值的数组：
         return view('users.edit',compact('user'));
     }
