@@ -10,7 +10,7 @@ class Users extends Controller
     public function __construct()
     {
         $this->middleware('auth',[
-            'except' => ['create','store']
+            'except' => ['create','store','index']
         ]);
         $this->middleware('guest',[
             'only' => ['create']
@@ -86,5 +86,17 @@ class Users extends Controller
     public function index(){
         $users = User::paginate(10);
         return view('users.index',compact('users'));
+    }
+    /**
+     * 我们首先会根据路由发送过来的用户 id 进行数据查找，
+     * 查找到指定用户之后再调用 Eloquent 模型提供的 
+     * delete 方法对用户资源进行删除，成功删除后在页面
+     * 顶部进行消息提示。最后将用户重定向到上一次进行删除操作的页面，即用户列表页。
+     */
+    public function destroy(User $user){
+        $this->authorize('destroy',$user);
+        $user->delete();
+        session()->flash('success','删除用户成功！');
+        return back();
     }
 }
