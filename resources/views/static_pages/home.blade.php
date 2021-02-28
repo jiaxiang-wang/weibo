@@ -4,7 +4,7 @@
 <div class="jumbotron">
   <h1>Hello </h1>
   <p class="lead">
-    欢迎来到王佳博的个人主页
+   想要走得快，就单独上路；想要走得远，就结伴同行。
   </p>
   <p>一切从这里开始</p>
   <p>

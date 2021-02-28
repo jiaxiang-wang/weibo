@@ -24,3 +24,7 @@ Route::resource('users','Users');
 
 //路由声明时必须使用 Eloquent 模型的单数小写格式来作为路由片段参数，User 对应 {user}
 Route::get('/users/{user}','Users@show')->name('users.show');
+//会话
+Route::get('login','Sessions@create')->name('login');
+Route::post('login','Sessions@store')->name('login');
+Route::delete('logout','Sessions@destroy')->name('logout');
