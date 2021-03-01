@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+ROute::get('/test','Test@index');
 Route::get('/','StaticPages@home')->name('home');
 Route::get('/help','StaticPages@help')->name('help');
 Route::get('/about','StaticPages@about')->name('about');
