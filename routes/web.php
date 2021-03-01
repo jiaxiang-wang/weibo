@@ -32,3 +32,8 @@ Route::delete('logout','Sessions@destroy')->name('logout');
 Route::get('/users/{user}/edit','Users@edit')->name('users.edit');
 //Route::patch('/users/{user}/update','Users@update')->name('users.update');
 Route::get('signup/confirm/{token}','Users@confirmEmail')->name('confirm_email');
+/* 密码重置 */
+Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
+Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
+Route::post('password/reset', 'Auth\ResetPasswordController@reset')->name('password.update');
