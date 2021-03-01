@@ -31,3 +31,4 @@ Route::delete('logout','Sessions@destroy')->name('logout');
 /* 编辑用户 */
 Route::get('/users/{user}/edit','Users@edit')->name('users.edit');
 //Route::patch('/users/{user}/update','Users@update')->name('users.update');
+Route::get('signup/confirm/{token}','Users@confirmEmail')->name('confirm_email');
