@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Status;
+use Auth;
 
 //构建三个静态页面分别是主页、帮助页、关于页
 class StaticPages extends Controller
@@ -10,7 +12,10 @@ class StaticPages extends Controller
     //主页
     public function home(){
         // return '主页';
-        return view('/static_pages/home');
+        if(Auth::check()){
+            $feed_items = Auth::user()->feed()->paginate(30);
+        }
+        return view('/static_pages/home',compact('feed_items'));
     }
     //帮助页
     public function help(){
