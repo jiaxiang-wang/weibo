@@ -32,8 +32,9 @@ class Users extends Controller
      */
     public function show(User $user)
     {
+        $statuses = $user ->statuses()->orderBy('created_at','desc')->paginate(10);
         $this->authorize('show',$user);//1.设置策略 2.编写策略页面方法 3.编写自动注册方法
-        return view('users.show',compact('user'));
+        return view('users.show',compact('user','statuses'));
     }
     /*
     册用户提交到store方法
